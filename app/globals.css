@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream text-charcoal;
+  }
+}
+
+@layer components {
+  .tool-card {
+    @apply bg-white rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-burgundy text-white px-6 py-3 rounded-lg hover:bg-navy transition-colors duration-300;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceGentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
